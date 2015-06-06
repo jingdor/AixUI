@@ -1,0 +1,121 @@
+/* AixUI Compose type*/
+
+/* AixUI Button Group*/
+.aix-ui-bngroup{
+	position:relative;
+	display:inline-block;
+	list-style-type:none;
+	list-style:none;
+	padding:0;
+	margin:0;
+	max-width:100%;
+	zoom:1;
+}
+
+.aix-ui-bn + .aix-ui-bn,
+.aix-ui-bn + .aix-ui-bngroup,
+.aix-ui-bngroup + .aix-ui-bn,
+.aix-ui-bngroup + .aix-ui-bngroup{
+	margin-left : 3px;
+}
+	.aix-ui-bngroup:after{
+		display:table;
+		line-height: 0;
+		content:"";
+		clear:both;
+	}
+	
+	.aix-ui-bngroup .aix-ui-bn{
+		float:left;
+		margin-left: -1px;
+		*zoom:1;
+	}
+
+	.aix-ui-bngroup .aix-ui-bn:hover{
+		/* it cause overllaping Button Group*/
+		z-index:2;
+	}
+
+	.aix-ui-bngroup .aix-ui-bn:first-child{
+		margin-left:0;
+	}
+
+/* [ Button ] UI base */
+.aix-ui-bn{
+	position: relative ;
+	z-index:1 ;
+	display:inline-block;
+	margin:0;
+	font-size:inherit;
+	line-height:1.4828;
+	border: 1px solid transparent;
+	text-decoration:none;
+	text-align:center;
+	white-space: nowrap;
+	overflow: visible;
+	zoom:1;
+}
+	/* -[Button] UI fb normal */
+	.aix-ui-bn.fbn{
+		font:bold 12px/normal 'Lucida grande',tahoma,verdana,arial, sans-serif;
+		color:#484848;
+		text-shadow:0 1px 0 #fff;
+	
+		border-color:#999;
+		border-bottom-color:#888;
+		padding:.3em .6em .4em .6em; 
+	
+		background-color:#eee;
+		-webkit-background-image:linear-gradient(#f5f6f6,#e4e4e3);
+		-moz-background-image:linear-gradient(#f5f6f6,#e4e4e3);
+		-o-background-image:linear-gradient(#f5f6f6,#e4e4e3);
+		background-image:linear-gradient(#f5f6f6,#e4e4e3);
+	
+		-webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.18), inset 0 1px 0 #fff;
+		-moz-box-shadow: 0 1px 0 rgba(0,0,0,0.18), inset 0 1px 0 #fff;
+		-o-box-shadow: 0 1px 0 rgba(0,0,0,0.18), inset 0 1px 0 #fff;
+		box-shadow: 0 1px 0 rgba(0,0,0,0.18), inset 0 1px 0 #fff;
+	}
+		.aix-ui-bn.fbn:hover{
+			color:#333;
+			border-color:#565656;
+			border-bottom-color:#484848;
+		}
+		
+		.aix-ui-bn.fbn:active{
+			color:#555;
+			border-color:#aaa;
+			background:#ddd;
+			box-shadow:none;
+		}
+	
+	/* -Button UI fb info */
+	.aix-ui-bn.fbi{
+		font:bold 12px/normal 'Lucida grande',tahoma,verdana,arial, sans-serif;
+		color:#eee;
+		
+		border-color:#29447e #29447e #1a356e;
+		padding:.3em .6em .4em .6em; 
+	
+		background-color:#5874A8;
+		-webkit-background-image:linear-gradient(#637bad,#5872a7);
+		-moz-background-image:linear-gradient(#637bad,#5872a7);
+		-o-background-image:linear-gradient(#637bad,#5872a7);
+		background-image:linear-gradient(#637bad,#5872a7);
+	
+		-webkit-box-shadow: 0 1px 0 rgba(0,0,0,.3), inset 0 1px 0 #8a9cc2;
+		-moz-box-shadow: 0 1px 0 rgba(0,0,0,.3), inset 0 1px 0 #8a9cc2;
+		-o-box-shadow: 0 1px 0 rgba(0,0,0,.3), inset 0 1px 0 #8a9cc2;
+		box-shadow: 0 1px 0 rgba(0,0,0,.3), inset 0 1px 0 #8a9cc2;
+	}
+		.aix-ui-bn.fbi:hover{
+			border-color:#102654;
+			color:#fff;
+		}
+		
+		.aix-ui-bn.fbi:active{
+			color:#ddd;
+			border-color:#29447e;
+			background:#4f6aa3;
+			box-shadow:none;
+		}

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Normal.CSS | Review</title>
+	<link rel="stylesheet" href="../common/normal-com.css" media="all">
+	<link rel="stylesheet" href="../common/ui-com.css" media="all">
+	<link rel="stylesheet" href="../common/icon-com.css" media="all">
+	<link rel="stylesheet" href="../compose/ui-layout.css" media="all">
+	<link rel="stylesheet" href="../compose/ui-button.css" media="all">
+	<link rel="stylesheet" href="../compose/ui-input.css" media="all">
+	<link rel="stylesheet" href="../compose/ui-form.css" media="all" />
+	<link rel="stylesheet" href="../compose/ui-tooltip.css" media="all" />
+</head>
+<body class="aix-app" style="width:50%; margin:0 auto;">
+	<h1>[h1] Tag Elments</h1>
+	<hr>
+	<h2>[h2] Tag Elments</h2>
+	<hr>
+	<h3>[h3] Tag Elments</h3>
+	<hr>
+	<h4>[h4] Tag Elments</h4>
+	<hr>
+	<h5>[h5] Tag Elments</h5>
+	<hr>
+	<h6>[h6] Tag Elments</h6>
+	<hr>
+	
+	<p>&lt;p&gt; Tag Elments --- base </p>
+	<p>&lt;p&gt; Tag Elments --- meduim </p>
+	<p>&lt;p&gt; Tag Elments --- large </p>
+
+	<hr>
+	
+	<p>Txt with more wonderful text amazing merge <b>bTag</b> and italic style <i>iTag</i> or <a title="Google Search Engineer" href="https://www.google.com" target="_blank">Google</a> <del> delete them </del> </p>
+
+	<blockquote>
+		<p>in blockquote here is the some text</p>
+		<p>		in Blockqute not like the <del datetime="2015-06-04T11:28:26 +0800">pre</del> you know its right</p>
+	</blockquote>
+	<pre>
+			<strong>in pre</strong> 
+					We will get code like this
+			type in <code>code</code> in in same as you know:
+
+			<code>sudo apt-get install node</code>
+	</pre>
+
+	<hr>
+	
+	<div>
+		<h5> Introduce UI compose [Button] </h5>
+		&nbsp; &nbsp; <button class="aix-ui aix-ui-bn fbn">NativeBtn</button>
+		&nbsp; &nbsp; <input class="aix-ui aix-ui-bn fbi" type="button" value="InputBtn"/>
+		<br>
+		<br>
+		&nbsp; &nbsp;
+		<div class="aix-ui-bngroup">
+			<a href="#" class="aix-ui aix-ui-bn fbn"><i class="glyphicons glyphicons-envelope x05"></i> Inbox</a>
+				<a href="#" class="aix-ui aix-ui-bn fbn"><i class="glyphicons glyphicons-pencil x05"></i> Dashboard</a>
+					<a href="#" class="aix-ui aix-ui-bn fbn"><i class="glyphicons glyphicons-user x05"></i> Account</a>
+					<a href="#" class="aix-ui aix-ui-bn fbn"><i class="glyphicons glyphicons-lock x05"></i> Logout</a>
+		</div>
+
+		<br>
+		&nbsp; &nbsp;
+		<div class="aix-ui-bngroup">
+			<button class="aix-ui aix-ui-bn fbn"><i class="glyphicons glyphicons-plus x05"></i> Commit</button>
+			<button class="aix-ui aix-ui-bn fbn"><i class="glyphicons glyphicons-minus x05"></i> Clean</button>
+			<button class="aix-ui aix-ui-bn fbn"><i class="glyphicons glyphicons-git-merge x05"></i> Merge</button>
+			<button class="aix-ui aix-ui-bn fbi"><i class="glyphicons glyphicons-wrench x05"></i> Settings</button>
+		</div>
+	</div>
+	
+	<hr>
+	
+	<div>
+		<h5>Introduce UI compose [input]</h5>
+		<br>
+		<h6> --- Input NG normal [ normal require success error ]</h6>
+		<input type="text" style="width:200px;" class="aix-ui aix-ui-in ngn" placeholder="Input NGN normal" />
+		<br>
+		<br>
+		<input type="text" style="width:200px;" class="aix-ui aix-ui-in ngn s" placeholder="Input NGN success" />
+		<br>
+		<br>
+		<input type="text" style="width:200px;" class="aix-ui aix-ui-in ngn e" placeholder="Input NGN error" />
+		<br>
+		<br>
+		<input type="text" style="width:200px;" class="aix-ui aix-ui-in ngn r" placeholder="Input NGN require" />
+		<br>
+		<br>
+		
+
+		<h6> --- Input NG surround [ normal reuqire sucess error ]</h6>
+		<input type="text" style="width:200px;" class="aix-ui aix-ui-in ngs" placeholder="Input NGS normal" />
+		<br>
+		<br>
+		<input type="text" style="width:200px;" class="aix-ui aix-ui-in ngs s" placeholder="Input NGS success" />
+		<br>
+		<br>
+		<input type="text" style="width:200px;" class="aix-ui aix-ui-in ngs e" placeholder="Input NGS error" />
+		<br>
+		<br>
+		<input type="text" style="width:200px;" class="aix-ui aix-ui-in ngs r" placeholder="Input NGS require" />
+		<br>
+		<br>
+	</div>
+	
+	<br>
+	<hr>
+
+	<div>
+		<h5>Introduce Form group style</h5>
+		<br>
+		
+		<form class="aix-ui-fm" action="" style="width:237px;">
+			<div class="aix-ui-fg">
+				<label class="aix-ui aix-ui-lb ngn "><i class="glyphicons glyphicons-user x05"></i></label>
+				<input class="aix-ui aix-ui-in ngn " type="email" placeholder="UserName" style="width:200px" maxlength=30 />
+			</div>
+			<div class="aix-ui-fg">
+				<label class="aix-ui aix-ui-lb ngn"><i class="glyphicons glyphicons-lock x05"></i></label>
+				<input class="aix-ui aix-ui-in ngn" type="password" placeholder="Password" style="width:200px">
+			</div>
+			<div class="aix-ui-fg r">
+				<button class="aix-ui aix-ui-bn fbn">Register</button>
+				<button class="aix-ui aix-ui-bn fbi">Login</button>
+			</div>
+		</form>
+	</div>
+	<br>
+	<hr>
+	<div>
+		<h5> Introduce Tooltip compose </h5>
+
+		<div class="aix-ui aix-ui-tp l">
+			<div class="aix-ui-tpi">JavaScript</div>
+			<div class="aix-ui-tpa"></div>
+		</div>
+		<br>
+		<br>
+		<div class="aix-ui aix-ui-tp r">
+			<div class="aix-ui-tpi">Golang</div>
+			<div class="aix-ui-tpa"></div>
+		</div>
+		<br>
+		<br>
+		<div class="aix-ui aix-ui-tp t">
+			<div class="aix-ui-tpi">Clang</div>
+			<div class="aix-ui-tpa"></div>
+		</div>
+		<br>
+		<br>
+		<div class="aix-ui aix-ui-tp b">
+			<div class="aix-ui-tpi">Objective-C</div>
+			<div class="aix-ui-tpa"></div>
+		</div>
+		<br>
+		<br>
+		<div class="aix-ui aix-ui-tp require b">
+			<div class="aix-ui-tpi">Require</div>
+			<div class="aix-ui-tpa"></div>
+		</div>
+		<br>
+		<br>
+		<div class="aix-ui aix-ui-tp sucess b">
+			<div class="aix-ui-tpi">Sucess</div>
+			<div class="aix-ui-tpa"></div>
+		</div>
+		<br>
+		<br>
+		<div class="aix-ui aix-ui-tp error b">
+			<div class="aix-ui-tpi">Error</div>
+			<div class="aix-ui-tpa"></div>
+		</div>
+		<br>
+		<br>
+		<div class="aix-ui aix-ui-tp reverse b">
+			<div class="aix-ui-tpi">Reverse Bottom</div>
+			<div class="aix-ui-tpa"></div>
+		</div>
+		<br>
+		<br>
+		<div class="aix-ui aix-ui-tp reverse l">
+			<div class="aix-ui-tpi">Reverse Left</div>
+			<div class="aix-ui-tpa"></div>
+		</div>
+		<br>
+		<br>
+		<div class="aix-ui aix-ui-tp reverse r">
+			<div class="aix-ui-tpi">Reverse Right</div>
+			<div class="aix-ui-tpa"></div>
+		</div>
+		<br>
+		<br>
+		<div class="aix-ui aix-ui-tp reverse t">
+			<div class="aix-ui-tpi">Reverse Top</div>
+			<div class="aix-ui-tpa"></div>
+		</div>
+		<br>
+		<br>
+		<div class="aix-ui aix-ui-tp radius b">
+			<div class="aix-ui-tpi">Radius Tip</div>
+			<div class="aix-ui-tpa"></div>
+		</div>
+		<br>
+		<br>
+		<div class="aix-ui aix-ui-tp radius reverse b">
+			<div class="aix-ui-tpi">Radius Tip</div>
+			<div class="aix-ui-tpa"></div>
+		</div>
+	</div>
+
+	<br>
+	<br>
+	<br>
+</body>
+</html>

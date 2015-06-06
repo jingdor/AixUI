@@ -1,0 +1,97 @@
+/*
+ * AixUI Common ui reseter 
+ *
+ * Just for My NodeJS Bloger
+ *
+ * Date: 2015.6.2
+ * Anthor: YiJun
+ *
+ */
+
+/* AixUI clear */
+.aix-clr,
+.aix-clear{
+	clear:both;
+	zoom:1;
+}
+
+.aix-clr:after,
+.aix-clear:after{
+	display: table;
+	line-height: 0;
+	content:"";
+	clear:both;
+}
+
+/* AixUI tag inject*/
+/* for base tag */
+/* body | html */
+.aix-app{
+	color:#202020;
+	line-height:1.4181583;
+	background-color: transparent;
+	-webkit-font-smoothing:antialiased;
+	-webkit-user-select: inherit;
+	-moz-user-select: inherit;
+	-o-user-select: inherit;
+	user-select: inherit;
+}
+
+/* AixUI compose */
+/* AixUI Base parent */
+.aix-ui{
+	background-color:transparent;
+	border-color: transparent;
+	font:inherit;
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	appearance:none;
+	z-index:0;
+	*zoom:1;
+}
+	/* AixUI Base compose */
+	a.aix-ui{
+		cursor:pointer;
+		text-decoration:none;
+		filter:alpha(opcity=100);
+	}
+	label.aix-ui{
+		cursor:pointer;
+		display:inline-block;
+		vertical-align:baseline;
+	}
+	
+	input.aix-ui{ 
+		outline:none;
+	}
+	
+	input[type=button].aix-ui{
+		cursor:pointer;
+	}
+	
+	form.aix-ui {
+		position:static;		
+		zoom:1;
+	}
+	
+	button.aix-ui{
+		cursor:pointer;
+		text-align:center;
+	}
+	
+	select.aix-ui{
+		cursor:pointer;
+		vertical-align:middle;
+	}
+	
+	textarea.aix-ui{
+		padding:0;
+		text-align:inherit;
+	}
+
+/* Base reset item behave like normal div */
+.aix-lo{
+	display:block;
+	position:static;
+	background-color:transparent;
+}

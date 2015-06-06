@@ -1,0 +1,95 @@
+/*
+ * UI form compose
+ */
+
+.aix-ui-fm{
+	display:block;
+	padding:1px;
+	border:0;
+	*zoom:1;
+}
+	.aix-ui-fm>.aix-ui-fg{
+		position: relative;
+		display:block;
+		width:100%;
+		margin-bottom:10px;
+		clear:right;
+	}
+	.aix-ui-fm>.aix-ui-fg:after{
+		display:table;
+		line-height: 0;
+		content:"";
+		clear:both;
+	}
+
+	.aix-ui-fm>.aix-ui-fg label,
+	.aix-ui-fm>.aix-ui-fg input,
+	.aix-ui-fm>.aix-ui-fg button,
+	.aix-ui-fm>.aix-ui-fg select,
+	.aix-ui-fm>.aix-ui-fg textarea{
+		display:inline-block;
+		height:auto;
+		float:left;
+		margin:0;
+		*zoom:1;
+	}
+
+	.aix-ui-fm>.aix-ui-fg.r> label, 
+	.aix-ui-fm>.aix-ui-fg.r> input,
+	.aix-ui-fm>.aix-ui-fg.r> button,
+	.aix-ui-fm>.aix-ui-fg.r> select,
+	.aix-ui-fm>.aix-ui-fg.r> textarea{
+		float:right;
+	}
+
+	/* label + input(only) */
+	/* basic */
+	.aix-ui-fm .aix-ui-fg .aix-ui-lb{
+		max-width:30%;
+		height:100%;
+		cursor:default;
+		border:1px solid transparent;
+		text-align:center;
+		background:transparent;
+		vertical-align: baseline;
+	}
+	.aix-ui-fm .aix-ui-fg .aix-ui-lb + .aix-ui-in{
+		max-width:80%;
+		border-left-color:transparent;
+		border-left:0;
+		box-shadow:none;
+		margin-left:-1px;
+		z-index:1;
+	}
+	/* [ Input Label ] style NGN */
+	.aix-ui-fm .aix-ui-fg .aix-ui-lb.ngn{
+		min-width:36px;
+		padding: 2px 0 1px 0;
+		color:#222;
+		border-bottom-color:#564b5b;
+	}
+	.aix-ui-fm .aix-ui-fg .aix-ui-lb.ngn.s{
+		color:#317742;
+		border-bottom-color:#317742;
+	}
+	.aix-ui-fm .aix-ui-fg .aix-ui-lb.ngn.e{
+		color:#243652;
+		border-bottom-color:#425573;
+	}
+	.aix-ui-fm .aix-ui-fg .aix-ui-lb.ngn.r{
+		color:#243652;
+		border-bottom-color:#425573;
+	}
+
+	.aix-ui-fm .aix-ui-fg .aix-ui-lb.ngn + .aix-ui-in.ngn{
+		padding-left:6px;
+	}
+
+	/* [ button ] */
+	.aix-ui-fm .aix-ui-fg.r .aix-ui-bn ~ .aix-ui-bn{
+		margin-right: 4px;
+	}
+
+		
+
+

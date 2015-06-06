@@ -1,0 +1,38 @@
+/* AixUI LayOut building */
+
+/* LayOut row */
+.aix-lo-row{
+	width:100%;
+	zoom:1;
+}
+	.aix-lo-row:after,
+	.aix-lo-row:before{
+		display:table;
+		line-height:0;
+		content:""
+	}
+	.aix-lo-row:after{
+		clear:both;
+	}
+
+.aix-lo-hf{
+	width:50%;
+	min-width:50%;
+	clear:both;
+}
+
+	.aix-lo-hf:after{
+		display:table;
+		line-height: 0;
+		content:"";
+		clear:both;
+	}
+	
+
+/* AixUI Format text */
+.aix-fm{
+	font:inherit;
+	font-weight:normal;
+	font-size-adjust: none;
+	vertical-align:baseline;
+}
