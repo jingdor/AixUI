@@ -16,9 +16,9 @@
 	max-width:100%;
 	width:100%;
 	list-style:none;
-	border-left: 1px solid transparent;
 	list-style-type:none;
 	clip:auto;
+	z-index:1;
 }
 	.aix-ui-brdcb:after{
 		display:table;
@@ -27,20 +27,72 @@
 		clear:both;
 	}
 
-	.aix-ui-brdcb > .aix-ui-brdcb-item{
+/* color scheme Emacs */
+	.aix-ui-brdcb.emacs > .aix-ui-brdcb-item{
+		position:relative;
 		display:inline-block;
+		cursor: default;
+		height:22px;
+		line-height: 22px;
+		font-size:13px;
 		text-align:left;
-		color:#423888;
+		background-color:#ccc;
+		color:#686868;
 		width:auto;
+		padding: 0 24px 0 6px;
 		float:left;
 	}
+		.aix-ui-brdcb.emacs > .aix-ui-brdcb-item:before{
+			position:absolute;
+			display:inline-block;
+			top:0;
+			right:0;
+			border:11px solid transparent;
+			height:0;
+			font-size:0;
+			content:"";
+			overflow: hidden;
+		}
+		.aix-ui-brdcb.emacs > .aix-ui-brdcb-item:first-child{
+			padding-left:12px;
+			background-color:#888;
+			color:#fff;
+		}
+		.aix-ui-brdcb.emacs > .aix-ui-brdcb-item:last-child{
+			background-color:#f0f0f0;
+			color:#333;
+		}
 
-		.aix-ui-brdcb > .aix-ui-brdcb-item.active{
-			color:#585858;			
+		.aix-ui-brdcb.emacs > .aix-ui-brdcb-item:first-child:before{
+			border-top-color:#ccc;
+			border-right-color:#ccc;
+		}
+		.aix-ui-brdcb.emacs > .aix-ui-brdcb-item:nth-last-child(2){
+			background-color:#ddd;
+			color:#666;
+		}
+		.aix-ui-brdcb.emacs > .aix-ui-brdcb-item:nth-last-child(2):before{
+			border-top-color:#f0f0f0;	
+			border-right-color:#f0f0f0;	
+		}
+		.aix-ui-brdcb.emacs > .aix-ui-brdcb-item:nth-last-child(3):before{
+			border-top-color:#ddd;	
+			border-right-color:#ddd;	
+		}
+
+		.aix-ui-brdcb.emacs > .aix-ui-brdcb-item:last-child:before{
+			border-top-color:#fff;
+			border-right-color:#fff;
+				
+		}
+		.aix-ui-brdcb.emacs > .aix-ui-brdcb-item.active{
 			font-weight:bold;
 		}
 
-		.aix-ui-brdcb > .aix-ui-brdcb-item:after{
+
+/* color scheme vim*/
+	.aix-ui-brdcb.vim > .aix-ui-brdcb-item{
 	
-		}	
+	}
+
 
