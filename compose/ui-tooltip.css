@@ -11,10 +11,11 @@
 	padding:2px 7px 3px 7px;
 	margin:0;
 	box-shadow:2px 2px 1px rgba(0, 0, 0, 0.33);
-	-webkit-transition: all .2s ease-in-out 0s;
-	-moz-transition: all .2s ease-in-out 0s;
-	-o-transition: all .2s ease-in-out 0s;
-	transition: all .2s ease-in-out 0s;
+
+	-webkit-transition: top .2s ease-in-out 0s , left .2s ease-in-out 0s, bottom .2s ease-in-out 0s, right 2s ease-in-out 0s , opacity .2s ease-in-out 0s;
+	-moz-transition: top .2s ease-in-out 0s , left .2s ease-in-out 0s, bottom .2s ease-in-out 0s, right 2s ease-in-out 0s , opacity .2s ease-in-out 0s;
+	-o-transition: top .2s ease-in-out 0s , left .2s ease-in-out 0s, bottom .2s ease-in-out 0s, right 2s ease-in-out 0s , opacity .2s ease-in-out 0s;
+	transition: top .2s ease-in-out 0s , left .2s ease-in-out 0s, bottom .2s ease-in-out 0s, right 2s ease-in-out 0s , opacity .2s ease-in-out 0s;
 	*zoom:1;
 }
 
@@ -29,30 +30,28 @@
 	/* tooltips infomation content */
 	.aix-ui-tp > .aix-ui-tpi{
 		font-weight:bold;
-		font-size:12px;
-		color:#f1f1f1;
 		text-align:center;
+		font-size:12px;
+	  word-wrap: normal;
+		cursor:default;
+		color:#f1f1f1;
 	  text-rendering: geometricPrecision;
-	  word-wrap: normal
+		-webkit-user-select:none;
+		-moz-user-select:none;
+		-o-user-select:none;
+		user-select:none;
 	}
 
 	/* tooltips noarraw base*/
 	.aix-ui-tp > .aix-ui-tpa{
 		position:absolute;
 		display:inline-block;
-		font-size:0;
-		height:0;
 		border-style: solid;
+		font-size:0;
 		content:"";
+		height:0;
 	}
 
-/* UI radius */
-.aix-ui-tp.radius{
-	-webkit-border-radius:2px;
-	-moz-border-radius:2px;
-	-o-border-radius:2px;
-	border-radius:2px;
-}
 
 	/* Noarrow pointer */	
 	/* left && right */
@@ -133,10 +132,12 @@
 	.aix-ui-tp.reverse > .aix-ui-tpa:before,
 	.aix-ui-tp.reverse > .aix-ui-tpa:after{
 		position:absolute;
+		content:"";
 		display:inline-block;	
 		border-style:solid;
 		border-color:transparent;
-		content:"";
+		-webkit-font-smoothing: antialiased;
+		text-rendering: optimizeLegibility;
 	}
 
 	.aix-ui-tp.reverse.l > .aix-ui-tpa:before,
@@ -160,7 +161,7 @@
 		border-width: 6px 7px 6px 6px;
 	}
 	.aix-ui-tp.reverse.l > .aix-ui-tpa:before{
-		border-right-color:#222;
+		border-right-color:#181818;
 		left:-7px;
 	}
 	.aix-ui-tp.reverse.l > .aix-ui-tpa:after{
@@ -177,7 +178,7 @@
 		border-width: 6px 6px 6px 7px;
 	}
 	.aix-ui-tp.reverse.r > .aix-ui-tpa:before{
-		border-left-color:#222;
+		border-left-color:#181818;
 		right:-7px;
 	}
 	.aix-ui-tp.reverse.r > .aix-ui-tpa:after{
@@ -194,7 +195,7 @@
 		border-width: 7px 6px 6px 6px;
 	}
 	.aix-ui-tp.reverse.b > .aix-ui-tpa:before{
-		border-top-color:#222;
+		border-top-color:#181818;
 		bottom:-7px;
 	}
 	.aix-ui-tp.reverse.b > .aix-ui-tpa:after{
@@ -208,11 +209,190 @@
 		border-width: 6px 6px 7px 6px;
 	}
 	.aix-ui-tp.reverse.t > .aix-ui-tpa:before{
-		border-bottom-color:#222;
+		border-bottom-color:#181818;
 		top:-7px;
 	}
 	.aix-ui-tp.reverse.t > .aix-ui-tpa:after{
 		border-bottom-color:#fff;
 		top:-5px;
 	}
+
+/* Aix UI Popover Panel Compose */
+/* default */
+.aix-ui-po{
+	position:absolute;
+	display:block;
+	font: inherit;
+	width: 200px;
+	/* for render flex */
+	padding:0 2px;
+	background-color:#181818;
+	border:1px solid transparent;
+	box-shadow:2px 2px 2px rgba(0, 0, 0, 0.5);
+	z-index:2;
+	*zoom:1;
+}
+	.aix-ui-po:before,
+	.aix-ui-po:after{
+		position: absolute;
+		display:inline-block;
+		border-width:12px;
+		border-style:solid;
+		border-color:transparent;
+		content:"";
+		height:0;
+		font-size:0;
+	}
+	.aix-ui-po:after{
+		clear:both;
+	}
+
+	/* Popover bside arrow */
+	.aix-ui-po.t:before,
+	.aix-ui-po.t:after,
+	.aix-ui-po.b:before,
+	.aix-ui-po.b:after{
+		left:50%;
+		margin-left:-12px;
+	}
+
+	.aix-ui-po.l:before,
+	.aix-ui-po.l:after,
+	.aix-ui-po.r:before,
+	.aix-ui-po.r:after{
+		top:50%;
+		margin-top:-12px;
+	}
+	/* bottom arraw */
+	.aix-ui-po.b:before{
+		border-top-color:#181818;
+		bottom:-24px;
+		-webkit-filter:drop-shadow(2px 2px 1px #989898);
+	}
+
+	.aix-ui-po.b:after{
+		border-top-color:#181818;
+		bottom:-23px;
+	}
+	/* top */
+	.aix-ui-po.t:before{
+		border-bottom-color:#181818;
+		top:-24px;
+	}
+	.aix-ui-po.t:after{
+		border-bottom-color:#181818;	
+		top:-23px;
+	}
+	/* left */
+	.aix-ui-po.l:before{
+		border-right-color:#181818;
+		left:-24px;
+	}
+
+	.aix-ui-po.l:after{
+		border-right-color:#181818;
+		left:-23px;
+	}
+	/* right */
+	.aix-ui-po.r:before{
+		border-left-color:#181818;
+		right:-24px;
+		-webkit-filter:drop-shadow(2px 2px 1px #989898);
+	}
+
+	.aix-ui-po.r:after{
+		border-left-color:#181818;
+		right:-23px;
+	}
+
+	.aix-ui-po > .aix-ui-pot,
+	.aix-ui-po > .aix-ui-poc{
+		position:relative;
+		padding: 7px 15px;
+		display:flex;
+		max-width:100%;
+		font-style:normal;
+	}
+
+	/* Popover title */
+	.aix-ui-po > .aix-ui-pot{
+		color:#fff;
+		font-weight:bold;
+		text-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.5)
+	}
+		/* Popover title style reset */
+		.aix-ui-po > .aix-ui-pot h1,
+		.aix-ui-po > .aix-ui-pot h2,
+		.aix-ui-po > .aix-ui-pot h3,
+		.aix-ui-po > .aix-ui-pot h4,
+		.aix-ui-po > .aix-ui-pot h5,
+		.aix-ui-po > .aix-ui-pot h6{
+			margin:0;
+		}
+
+	/* Popover content */
+	.aix-ui-po > .aix-ui-poc{
+		color:#d3d3d3;
+	}
+
+/* color scheme */
+/* reverse */
+.aix-ui-po.reverse{
+	background-color:#fff;
+	border-color:#181818;
+	color:#181818;
+}
+	.aix-ui-po.reverse:before,
+	.aix-ui-po.reverse:after{
+		text-align:inherit;
+		height:0;
+	}
+	/* reverse for arrow */
+	.aix-ui-po.reverse.b:before{
+		border-top-color:#181818;	
+	}
+	.aix-ui-po.reverse.b:after{
+		border-top-color:#fff;
+	}
+	.aix-ui-po.reverse.t:before{
+		border-bottom-color:#181818;	
+	}
+	.aix-ui-po.reverse.t:after{
+		border-bottom-color:#fff;
+	}
+	.aix-ui-po.reverse.l:before{
+		border-right-color:#181818;	
+	}
+	.aix-ui-po.reverse.l:after{
+		border-right-color:#fff;
+	}
+	.aix-ui-po.reverse.r:before{
+		border-left-color:#181818;	
+	}
+	.aix-ui-po.reverse.r:after{
+		border-left-color:#fff;
+	}
+
+	/* Reverse scheme title */
+	.aix-ui-po.reverse > .aix-ui-pot{
+		color:#181818;
+		font-weight:bold;
+		text-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.5)
+	}
+
+	/* Popover content */
+	.aix-ui-po.reverse > .aix-ui-poc{
+		color:#282828;
+	}
+
+
+/*Aix UI tooltip common radius */
+.aix-ui-po.radius,
+.aix-ui-tp.radius{
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	-o-border-radius:2px;
+	border-radius:2px;
+	clip:auto;
+}
 

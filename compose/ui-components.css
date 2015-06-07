@@ -1,0 +1,46 @@
+/*
+ * Aix UI Components 
+ */
+
+/* 
+ * UI Breadcrumbs
+ * 
+ * Breadcrumbs is the navigator for Post register
+ *
+ * Home _\ Post _\ Title 
+ * 
+ */
+.aix-ui-brdcb{
+	position:relative;
+	display:inline-block;
+	max-width:100%;
+	width:100%;
+	list-style:none;
+	border-left: 1px solid transparent;
+	list-style-type:none;
+	clip:auto;
+}
+	.aix-ui-brdcb:after{
+		display:table;
+		line-height: 0;
+		content:"";
+		clear:both;
+	}
+
+	.aix-ui-brdcb > .aix-ui-brdcb-item{
+		display:inline-block;
+		text-align:left;
+		color:#423888;
+		width:auto;
+		float:left;
+	}
+
+		.aix-ui-brdcb > .aix-ui-brdcb-item.active{
+			color:#585858;			
+			font-weight:bold;
+		}
+
+		.aix-ui-brdcb > .aix-ui-brdcb-item:after{
+	
+		}	
+
