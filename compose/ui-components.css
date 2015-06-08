@@ -27,8 +27,8 @@
 		clear:both;
 	}
 
-/* color scheme Emacs */
-	.aix-ui-brdcb.emacs > .aix-ui-brdcb-item{
+/* color scheme */
+	.aix-ui-brdcb > .aix-ui-brdcb-item{
 		position:relative;
 		display:inline-block;
 		cursor: default;
@@ -42,7 +42,7 @@
 		padding: 0 24px 0 6px;
 		float:left;
 	}
-		.aix-ui-brdcb.emacs > .aix-ui-brdcb-item:before{
+		.aix-ui-brdcb > .aix-ui-brdcb-item:before{
 			position:absolute;
 			display:inline-block;
 			top:0;
@@ -53,46 +53,147 @@
 			content:"";
 			overflow: hidden;
 		}
-		.aix-ui-brdcb.emacs > .aix-ui-brdcb-item:first-child{
+		.aix-ui-brdcb > .aix-ui-brdcb-item:first-child{
 			padding-left:12px;
 			background-color:#888;
 			color:#fff;
 		}
-		.aix-ui-brdcb.emacs > .aix-ui-brdcb-item:last-child{
+		.aix-ui-brdcb > .aix-ui-brdcb-item:last-child{
 			background-color:#f0f0f0;
 			color:#333;
 		}
 
-		.aix-ui-brdcb.emacs > .aix-ui-brdcb-item:first-child:before{
+		.aix-ui-brdcb > .aix-ui-brdcb-item:first-child:before{
 			border-top-color:#ccc;
 			border-right-color:#ccc;
 		}
-		.aix-ui-brdcb.emacs > .aix-ui-brdcb-item:nth-last-child(2){
+		.aix-ui-brdcb > .aix-ui-brdcb-item:nth-last-child(2){
 			background-color:#ddd;
 			color:#666;
 		}
-		.aix-ui-brdcb.emacs > .aix-ui-brdcb-item:nth-last-child(2):before{
+		.aix-ui-brdcb > .aix-ui-brdcb-item:nth-last-child(2):before{
 			border-top-color:#f0f0f0;	
 			border-right-color:#f0f0f0;	
 		}
-		.aix-ui-brdcb.emacs > .aix-ui-brdcb-item:nth-last-child(3):before{
+		.aix-ui-brdcb > .aix-ui-brdcb-item:nth-last-child(3):before{
 			border-top-color:#ddd;	
 			border-right-color:#ddd;	
 		}
 
-		.aix-ui-brdcb.emacs > .aix-ui-brdcb-item:last-child:before{
+		.aix-ui-brdcb > .aix-ui-brdcb-item:last-child:before{
 			border-top-color:#fff;
 			border-right-color:#fff;
 				
 		}
-		.aix-ui-brdcb.emacs > .aix-ui-brdcb-item.active{
+		.aix-ui-brdcb > .aix-ui-brdcb-item.active{
 			font-weight:bold;
 		}
 
+		/* coloresized*/
+		.aix-ui-brdcb.coloresized > .aix-ui-brdcb-item{
+			background-color:#448334;
+			color:#fff;
+		}
+		.aix-ui-brdcb.coloresized > .aix-ui-brdcb-item:before{
+			border-top-color:#448334;	
+			border-right-color:#448334;
+		}
+		.aix-ui-brdcb.coloresized > .aix-ui-brdcb-item:first-child{
+			background-color:#990009;
+		}
+		.aix-ui-brdcb.coloresized > .aix-ui-brdcb-item:first-child:before{
+			border-right-color:#448334;
+			border-top-color:#448334;
+		}
+		.aix-ui-brdcb.coloresized > .aix-ui-brdcb-item:last-child{
+			background-color:#eee;
+			color:#181818;
+		}
+		.aix-ui-brdcb.coloresized > .aix-ui-brdcb-item:last-child:before{
+			border-top-color:#fff;
+			border-right-color:#fff;
+		}
+		.aix-ui-brdcb.coloresized > .aix-ui-brdcb-item:nth-last-child(2){
+			background-color:#679998;
+			color:#fff;
+		}
+		.aix-ui-brdcb.coloresized > .aix-ui-brdcb-item:nth-last-child(2):before{
+			border-top-color:#eee;
+			border-right-color:#eee;
+		}
+		.aix-ui-brdcb.coloresized > .aix-ui-brdcb-item:nth-last-child(3):before{
+			border-top-color:#679998;
+			border-right-color:#679998;
+		}
 
-/* color scheme vim*/
-	.aix-ui-brdcb.vim > .aix-ui-brdcb-item{
-	
+
+/* 
+ * UI Tags Style 
+ *
+ * Simple Post tags
+ *  ________
+ * | AixTag >
+ * 
+ */
+/* base */
+.aix-ui-tag{
+	position:relative;
+	display:inline-block;
+	font-size:12px;	
+	height:22px;
+	line-height:22px;
+	border:0;
+	background-color:#686868;
+	color:#fff;
+	vertical-align: middle;
+	text-indent:1px;
+	margin-right: 18px;
+	padding:0 8px;
+	word-warp:break-word;
+	-webkit-border-radius:0;	
+	-moz-border-radius:0;	
+	-o-border-radius:0;	
+	border-radius:0;	
+	-webkit-box-shadow:2px 2px 1px rgba(0, 0, 0, .28);
+	-moz-box-shadow:2px 2px 1px rgba(0, 0, 0, .28);
+	-o-box-shadow:2px 2px 1px rgba(0, 0, 0, .28);
+	box-shadow:2px 2px 1px rgba(0, 0, 0, .28);
+}
+
+	.aix-ui-tag:before,
+	.aix-ui-tag:after{
+		content:"";
+		position:absolute;
+		display:block;
+		overflow: hidden;
+		clear:both;
 	}
 
+	.aix-ui-tag:before{
+		border:11px solid transparent;
+		border-left-color: #686868;	
+		right:-22px;
+		top:0;
+		-webkit-filter:drop-shadow(1px 1px 1px #989898);
+	}
 
+	.aix-ui-tag:after{
+		right:-2px;
+		top:50%;
+		margin-top:-2px;
+		width:4px;	
+		height:4px;
+		background-color:#fff;
+		-webkit-border-radius:100%;
+		-moz-border-radius:100%;
+		-o-border-radius:100%;
+		border-radius:100%;
+	}
+	
+	/* colorscheme for tags */
+	.aix-ui-tag.black{
+		background-color:#000;	
+	}
+	.aix-ui-tag.black:before{
+		border-left-color:#000;
+	}
